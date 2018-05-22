@@ -9,27 +9,21 @@
 // | Author: liu21st <liu21st@gmail.com>
 // +----------------------------------------------------------------------
 
-//return [
-//    '__pattern__' => [
-//        'name' => '\w+',
-//    ],
-//    '[hello]'     => [
-//        ':id'   => ['index/hello', ['method' => 'get'], ['id' => '\d+']],
-//        ':name' => ['index/hello', ['method' => 'post']],
-//    ],
-//
-//];
-
-
 use think\Route;
 
 // !!!  Route::rule('路由表达式','路由地址','请求类型','路由参数（数组）','变量规则（数组）');
 
 //Route::rule('hello','sample/Test/hello','GET',['https'=>false]);
-
 //Route::rule('hello','sample/Test/hello','GET|POST',['https'=>false]); //两种模式
-
-Route::post('hello/:id','sample/Test/hello');
-
+//Route::post('hello/:id','sample/Test/hello');
 //Route::post();
 //Route::any();
+
+
+
+//三段式：1、模块名api 2、控制器名v1.Banner(TP5就是这样定义的) 3、操作方法名
+Route::get('banner/:id','api/v1.Banner/getBanner');
+
+
+validate();
+
